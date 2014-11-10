@@ -1,0 +1,4 @@
+/* Display name and description for this extension. */
+"CFBundleDisplayName" = "Spotify4Me";
+"com.apple.notificationcenter.widget.description" = "This extension provides fast access to commong Spotify information";
+
