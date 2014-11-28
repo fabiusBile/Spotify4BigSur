@@ -5,158 +5,77 @@
 //  Created by Lucas Backert on 02.11.14.
 //  Copyright (c) 2014 Lucas Backert. All rights reserved.
 //
-
 import Foundation
 struct SpotifyApi {
+    static let osaStart = "tell application \"Spotify\" to"
     
     static func getState() ->String{
-        var textOutput = ""
-        let script = NSAppleScript(source: "tell application \"Spotify\" to player state")
-        var errorInfo: NSDictionary?
-        var descriptor = script?.executeAndReturnError(&errorInfo)
-        println("err: getState \(errorInfo?.description))")
-        if(descriptor?.stringValue != nil){
-            textOutput = descriptor!.stringValue!
-            println("res: getState \(descriptor!))")
-        }
-        return textOutput
+        return executeScript("player state")
     }
 
     static func getTitle() -> String{
-        var textOutput = ""
-        let script = NSAppleScript(source: "tell application \"Spotify\" to name of current track")
-        var errorInfo: NSDictionary?
-        var descriptor = script?.executeAndReturnError(&errorInfo)
-        println("err: getTitle \(errorInfo?.description))")
-        if(descriptor?.stringValue != nil){
-            textOutput = descriptor!.stringValue!
-            println("res: getTitle \(descriptor!.stringValue!))")
-        }
-        return textOutput
+        return executeScript("name of current track")
     }
     
     static func getAlbum() -> String{
-        var textOutput = ""
-        let script = NSAppleScript(source: "tell application \"Spotify\" to album of current track")
-        var errorInfo: NSDictionary?
-        var descriptor = script?.executeAndReturnError(&errorInfo)
-        println("err: getAlbum \(errorInfo?.description))")
-        if(descriptor?.stringValue != nil){
-            textOutput = descriptor!.stringValue!
-            println("res: getAlbum \(descriptor!.stringValue!))")
-        }
-        return textOutput
+        return executeScript("album of current track")
     }
     
     static func getArtist() -> String{
-        var textOutput = ""
-        let script = NSAppleScript(source: "tell application \"Spotify\" to artist of current track")
-        var errorInfo: NSDictionary?
-        var descriptor = script?.executeAndReturnError(&errorInfo)
-        println("err: getArtist \(errorInfo?.description))")
-        if(descriptor?.stringValue != nil){
-            textOutput = descriptor!.stringValue!
-            println("res: getArtist \(descriptor!.stringValue!))")
-        }
-        return textOutput
+        return executeScript("artist of current track")
     }
     
     static func getCover() -> NSData{
         var result: NSData = NSData()
-        let script = NSAppleScript(source: "tell application \"Spotify\" to artwork of current track")
+        let script = NSAppleScript(source: "\(osaStart) artwork of current track")
         var errorInfo: NSDictionary?
         var descriptor = script?.executeAndReturnError(&errorInfo)
-        println("err: getCover \(errorInfo?.description))")
         if(descriptor != nil){
             result = descriptor!.data
-            //println("res: getCover \(descriptor!.stringValue!))")
         }
         return result
     }
     
-    static func getDuration() -> String{
-        var textOutput = ""
-        let script = NSAppleScript(source: "tell application \"Spotify\" to duration of current track")
-        var errorInfo: NSDictionary?
-        var descriptor = script?.executeAndReturnError(&errorInfo)
-        println("err: getDuration \(errorInfo?.description))")
-        if(descriptor?.stringValue != nil){
-            textOutput = descriptor!.stringValue!
-            println("res: getDuration \(descriptor!.stringValue!))")
-        }
-        return textOutput
-    }
-    
-    static func getPosition() -> String{
-        var textOutput = ""
-        let script = NSAppleScript(source: "tell application \"Spotify\" to duration of current track")
-        var errorInfo: NSDictionary?
-        var descriptor = script?.executeAndReturnError(&errorInfo)
-        println("err: getPosition \(errorInfo?.description))")
-        if(descriptor?.stringValue != nil){
-            textOutput = descriptor!.stringValue!
-            println("res: getPosition \(descriptor!.stringValue!))")
-        }
-        return textOutput
-    }
-    
     static func getVolume() -> String{
-        var textOutput = ""
-        let script = NSAppleScript(source: "tell application \"Spotify\" to sound volume")
-        var errorInfo: NSDictionary?
-        var descriptor = script?.executeAndReturnError(&errorInfo)
-        println("err: getVolume \(errorInfo?.description))")
-        if(descriptor?.stringValue != nil){
-            textOutput = descriptor!.stringValue!
-            println("res: getVolume \(descriptor!.stringValue!))")
-        }
-        return textOutput
+        return executeScript("sound volume")
     }
     
     static func setVolume(level: Int){
-        let script = NSAppleScript(source: "tell application \"Spotify\" to set sound volume to \(level)")
-        var errorInfo: NSDictionary?
-        var descriptor = script?.executeAndReturnError(&errorInfo)
-        println("err: setVolume \(errorInfo?.description))")
+        executeScript("set sound volume to \(level)")
     }
     
-    static func toNextTrack() -> String{
-        var textOutput = ""
-        let script = NSAppleScript(source: "tell application \"Spotify\" to next track")
-        var errorInfo: NSDictionary?
-        var descriptor = script?.executeAndReturnError(&errorInfo)
-        println("err: toNextTrack \(errorInfo?.description))")
-        if(descriptor?.stringValue != nil){
-            textOutput = descriptor!.stringValue!
-            println("res: toNextTrack \(descriptor!.stringValue!))")
-        }
-        return textOutput
+    static func toNextTrack(){
+        executeScript("next track")
     }
     
-    static func toPreviousTrack() -> String{
-        var textOutput = ""
-        let script = NSAppleScript(source: "tell application \"Spotify\" to previous track")
-        var errorInfo: NSDictionary?
-        var descriptor = script?.executeAndReturnError(&errorInfo)
-        println("err: toPreviousTrack \(errorInfo?.description))")
-        if(descriptor?.stringValue != nil){
-            textOutput = descriptor!.stringValue!
-            println("res: toPreviousTrack \(descriptor!.stringValue!))")
-        }
-        return textOutput
+    static func toPreviousTrack(){
+        executeScript("previous track")
     }
     
-    static func toPlayPause() -> String{
-        var textOutput = ""
-        let script = NSAppleScript(source: "tell application \"Spotify\" to playpause")
+    static func toPlayPause(){
+        executeScript("playpause")
+    }
+    
+    static func executeScript(phrase: String) -> String{
+        var output = ""
+        let script = NSAppleScript(source: "\(osaStart) \(phrase)" )
         var errorInfo: NSDictionary?
         var descriptor = script?.executeAndReturnError(&errorInfo)
-        println("err: toPlayPause \(errorInfo?.description))")
+        //println("err: getState \(errorInfo?.description))")
         if(descriptor?.stringValue != nil){
-            textOutput = descriptor!.stringValue!
-            println("res: toPlayPause \(descriptor!.stringValue!))")
+            output = descriptor!.stringValue!
+            //println("descriptor: \(descriptor!))")
         }
-        return textOutput
+        return output
+    }
+    
+    // NOT USED AT THE MOMENT
+    static func getDuration() -> String{
+        return executeScript("duration of current track")
+    }
+    
+    static func getPosition() -> String{
+        return executeScript("position of current track")
     }
 }
 

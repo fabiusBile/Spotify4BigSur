@@ -23,7 +23,6 @@
 		F5AA16F71A10E83A00E1943A /* forward.ico in Resources */ = {isa = PBXBuildFile; fileRef = F5AA16F21A10E83900E1943A /* forward.ico */; };
 		F5AA16F81A10E83A00E1943A /* pause.ico in Resources */ = {isa = PBXBuildFile; fileRef = F5AA16F31A10E83900E1943A /* pause.ico */; };
 		F5AA16F91A10E83A00E1943A /* play.ico in Resources */ = {isa = PBXBuildFile; fileRef = F5AA16F41A10E83900E1943A /* play.ico */; };
-		F5AA16FA1A10E83A00E1943A /* refresh.ico in Resources */ = {isa = PBXBuildFile; fileRef = F5AA16F51A10E83A00E1943A /* refresh.ico */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,7 +80,6 @@
 		F5AA16F21A10E83900E1943A /* forward.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = forward.ico; sourceTree = "<group>"; };
 		F5AA16F31A10E83900E1943A /* pause.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = pause.ico; sourceTree = "<group>"; };
 		F5AA16F41A10E83900E1943A /* play.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = play.ico; sourceTree = "<group>"; };
-		F5AA16F51A10E83A00E1943A /* refresh.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = refresh.ico; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,7 +194,6 @@
 				F5AA16F21A10E83900E1943A /* forward.ico */,
 				F5AA16F31A10E83900E1943A /* pause.ico */,
 				F5AA16F41A10E83900E1943A /* play.ico */,
-				F5AA16F51A10E83A00E1943A /* refresh.ico */,
 				F59E97831A05C5AE00F7BFAB /* Info.plist */,
 				F59E97841A05C5AE00F7BFAB /* Spotify4Me.entitlements */,
 				F59E97851A05C5AE00F7BFAB /* InfoPlist.strings */,
@@ -342,7 +339,6 @@
 				F59E97871A05C5AE00F7BFAB /* InfoPlist.strings in Resources */,
 				F5AA16F61A10E83A00E1943A /* back.ico in Resources */,
 				F5AA16F91A10E83A00E1943A /* play.ico in Resources */,
-				F5AA16FA1A10E83A00E1943A /* refresh.ico in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

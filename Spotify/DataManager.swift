@@ -8,6 +8,7 @@
 
 import Foundation
 import AppKit
+import NotificationCenter
 
 class DataManager {
     let smState = "smState"
@@ -36,27 +37,37 @@ class DataManager {
                 self.back()
             case "finished":
                 defaultcase = true
-                println("been in finished case!")
                 break
             case let volumestring :
-                println("vol mes: \(volumestring)")
                 if let range = volumestring.rangeOfString("volume") {
                     let stringVol:String = volumestring.substringFromIndex(range.endIndex)
                     self.volume(stringVol.toInt()!)
                 }
-            default:
-                defaultcase = true
-                println("been in default case!")
             }
             if !defaultcase {
                 let notify = NSNotification(name: "Spotify4Me", object: "finished")
                 self.centerReceiver.postNotification(notify)
             }
+        }
+        
+        let spotifyObserver = self.centerReceiver.addObserverForName("com.spotify.client.PlaybackStateChanged", object: nil, queue: nil) { (note) -> Void in
+            let info = note.userInfo!
+            let state = info["Player State"]! as String
+            
+            let notify = NSNotification(name: "Spotify4Me", object: "update")
+            var mainapp: [NSRunningApplication] = NSRunningApplication.runningApplicationsWithBundleIdentifier("backert.SpotifyMain") as [NSRunningApplication]
+            
+            var controller = NCWidgetController.widgetController()
+            
+            if state == "Stopped" {
+                controller.setHasContent(false, forWidgetWithBundleIdentifier: "backert.SpotifyMain.SpotifyMain4Me")
+            }else{
+                controller.setHasContent(true, forWidgetWithBundleIdentifier: "backert.SpotifyMain.SpotifyMain4Me")
+            }
             
         }
     }
     func update(){
-        
         let state = SpotifyApi.getState()
         information.updateValue(state, forKey: smState)
         if state != "kPSS" {
@@ -66,7 +77,8 @@ class DataManager {
             information.updateValue(SpotifyApi.getCover(), forKey: smCover)
             information.updateValue(SpotifyApi.getVolume(), forKey: smVolume)
         }
-        save()
+        defaults.setPersistentDomain(information, forName: "backert.apps")
+        defaults.synchronize()
     }
     func playpause(){
         SpotifyApi.toPlayPause()
@@ -83,9 +95,5 @@ class DataManager {
     func volume(level: Int){
         SpotifyApi.setVolume(level)
         update()
-    }
-    func save(){
-        defaults.setPersistentDomain(information, forName: "backert.apps")
-        defaults.synchronize()
     }
 }

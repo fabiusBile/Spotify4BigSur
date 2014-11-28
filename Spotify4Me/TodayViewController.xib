@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
     </dependencies>
@@ -8,19 +8,14 @@
             <connections>
                 <outlet property="albumHeight" destination="dY1-2K-fv2" id="jCS-qh-Vzw"/>
                 <outlet property="albumOutput" destination="6KP-F3-1dC" id="TBe-j1-VuQ"/>
-                <outlet property="artist2refreshHeight" destination="8m5-PQ-b7O" id="OVN-I9-2Yk"/>
                 <outlet property="artistHeight" destination="b2X-h1-rbs" id="OJK-7g-Ea2"/>
                 <outlet property="artistOutput" destination="RnT-Vb-6ST" id="6aQ-07-K0C"/>
                 <outlet property="coverHeight" destination="hae-Jj-9Wy" id="XF9-kG-JYg"/>
                 <outlet property="coverOutput" destination="kwv-BL-ajF" id="VxI-7Y-Ig8"/>
-                <outlet property="nextButton" destination="io0-9P-MxH" id="XkO-vf-OpI"/>
                 <outlet property="playpauseButton" destination="pcw-0Z-NtY" id="cs3-gM-n1k"/>
-                <outlet property="previousButton" destination="WDj-mg-LZM" id="DmG-md-vS4"/>
-                <outlet property="refreshButton" destination="Y6S-YG-GFW" id="RF6-Xp-2Zw"/>
                 <outlet property="titleHeight" destination="Uum-mI-cfJ" id="t5w-Ju-G51"/>
                 <outlet property="titleOutput" destination="KU6-MB-4x2" id="ge8-Kp-Ho8"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
-                <outlet property="view2refreshHeight" destination="9D3-Zx-jNV" id="pCl-tr-jkf"/>
                 <outlet property="volumeSlider" destination="Amp-lj-6QK" id="3qF-hs-GO7"/>
             </connections>
         </customObject>
@@ -34,18 +29,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="18" id="Uum-mI-cfJ"/>
                     </constraints>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Mops" id="pgq-dU-GDk">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6KP-F3-1dC">
-                    <rect key="frame" x="0.0" y="51" width="233" height="18"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="18" id="dY1-2K-fv2"/>
-                    </constraints>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="3e5-Tl-BOw">
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="pgq-dU-GDk">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -62,34 +46,8 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Y6S-YG-GFW">
-                    <rect key="frame" x="10" y="5" width="25" height="25"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="25" id="BIX-HD-Oq1"/>
-                    </constraints>
-                    <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="refresh" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="MSc-vD-U1T">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="refreshButton:" target="-2" id="AgZ-RW-nwY"/>
-                    </connections>
-                </button>
-                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="io0-9P-MxH">
-                    <rect key="frame" x="100" y="6" width="20" height="20"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="20" id="3bQ-Nw-gwb"/>
-                    </constraints>
-                    <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="forward" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="qvr-vM-8Qd">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="nextButton:" target="-2" id="3PC-RF-boR"/>
-                    </connections>
-                </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pcw-0Z-NtY">
-                    <rect key="frame" x="68" y="2" width="24" height="28"/>
+                    <rect key="frame" x="40" y="2" width="24" height="28"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="24" id="ZRh-AS-CiT"/>
                     </constraints>
@@ -102,7 +60,7 @@
                     </connections>
                 </button>
                 <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Amp-lj-6QK">
-                    <rect key="frame" x="133" y="6" width="89" height="21"/>
+                    <rect key="frame" x="116" y="6" width="89" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="17" id="39P-Pd-6JA"/>
                     </constraints>
@@ -120,7 +78,7 @@
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="JGE-Oy-IUa"/>
                 </imageView>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WDj-mg-LZM">
-                    <rect key="frame" x="40" y="6" width="20" height="20"/>
+                    <rect key="frame" x="12" y="6" width="20" height="20"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="20" id="9UL-nX-AxH"/>
                     </constraints>
@@ -132,16 +90,37 @@
                         <action selector="previousButton:" target="-2" id="QBm-33-isc"/>
                     </connections>
                 </button>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="io0-9P-MxH">
+                    <rect key="frame" x="72" y="6" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="3bQ-Nw-gwb"/>
+                    </constraints>
+                    <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="forward" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="qvr-vM-8Qd">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="nextButton:" target="-2" id="3PC-RF-boR"/>
+                    </connections>
+                </button>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6KP-F3-1dC">
+                    <rect key="frame" x="0.0" y="49" width="233" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="dY1-2K-fv2"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="3e5-Tl-BOw">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
             </subviews>
             <constraints>
-                <constraint firstItem="Y6S-YG-GFW" firstAttribute="top" secondItem="RnT-Vb-6ST" secondAttribute="bottom" constant="3" id="8m5-PQ-b7O"/>
-                <constraint firstAttribute="bottom" secondItem="Y6S-YG-GFW" secondAttribute="bottom" constant="5" id="9D3-Zx-jNV"/>
+                <constraint firstItem="pcw-0Z-NtY" firstAttribute="top" secondItem="RnT-Vb-6ST" secondAttribute="bottom" constant="3" id="5e6-AT-jvg"/>
                 <constraint firstItem="pcw-0Z-NtY" firstAttribute="leading" secondItem="WDj-mg-LZM" secondAttribute="trailing" constant="8" symbolic="YES" id="AQr-oE-8Re"/>
-                <constraint firstItem="Y6S-YG-GFW" firstAttribute="bottom" secondItem="kwv-BL-ajF" secondAttribute="bottom" id="BAa-zP-goP"/>
-                <constraint firstItem="Y6S-YG-GFW" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="10" id="EMP-U1-ecm"/>
                 <constraint firstAttribute="trailing" secondItem="KU6-MB-4x2" secondAttribute="trailing" constant="89" id="FNy-Jn-5QX"/>
-                <constraint firstItem="Amp-lj-6QK" firstAttribute="leading" secondItem="io0-9P-MxH" secondAttribute="trailing" constant="15" id="GqX-UN-FCh"/>
-                <constraint firstItem="RnT-Vb-6ST" firstAttribute="top" secondItem="6KP-F3-1dC" secondAttribute="bottom" id="Hx2-6o-Vhc"/>
+                <constraint firstItem="Amp-lj-6QK" firstAttribute="leading" secondItem="io0-9P-MxH" secondAttribute="trailing" constant="26" id="GqX-UN-FCh"/>
+                <constraint firstItem="RnT-Vb-6ST" firstAttribute="top" secondItem="6KP-F3-1dC" secondAttribute="bottom" constant="-2" id="Hx2-6o-Vhc"/>
                 <constraint firstItem="WDj-mg-LZM" firstAttribute="top" secondItem="RnT-Vb-6ST" secondAttribute="bottom" constant="7" id="IAF-jn-aYX"/>
                 <constraint firstItem="KU6-MB-4x2" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="2" id="KyW-QC-1Rr"/>
                 <constraint firstItem="kwv-BL-ajF" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="7" id="Lx3-JG-PKQ"/>
@@ -149,14 +128,13 @@
                 <constraint firstItem="KU6-MB-4x2" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="VXB-qW-Hz8"/>
                 <constraint firstItem="6KP-F3-1dC" firstAttribute="leading" secondItem="RnT-Vb-6ST" secondAttribute="leading" id="Vpi-dz-aj2"/>
                 <constraint firstItem="Amp-lj-6QK" firstAttribute="centerY" secondItem="io0-9P-MxH" secondAttribute="centerY" id="XX0-n1-IYn"/>
-                <constraint firstItem="WDj-mg-LZM" firstAttribute="leading" secondItem="Y6S-YG-GFW" secondAttribute="trailing" constant="5" id="XcY-BD-jIZ"/>
-                <constraint firstItem="kwv-BL-ajF" firstAttribute="leading" secondItem="Amp-lj-6QK" secondAttribute="trailing" constant="10" id="Xq8-Uk-FN1"/>
+                <constraint firstItem="kwv-BL-ajF" firstAttribute="leading" secondItem="Amp-lj-6QK" secondAttribute="trailing" constant="27" id="Xq8-Uk-FN1"/>
                 <constraint firstItem="KU6-MB-4x2" firstAttribute="leading" secondItem="6KP-F3-1dC" secondAttribute="leading" id="Xwo-Lb-MY7"/>
                 <constraint firstItem="io0-9P-MxH" firstAttribute="leading" secondItem="pcw-0Z-NtY" secondAttribute="trailing" constant="8" symbolic="YES" id="cWj-ME-MSt"/>
                 <constraint firstItem="Amp-lj-6QK" firstAttribute="top" secondItem="RnT-Vb-6ST" secondAttribute="bottom" constant="8" symbolic="YES" id="go9-JZ-vCm"/>
-                <constraint firstItem="6KP-F3-1dC" firstAttribute="top" secondItem="KU6-MB-4x2" secondAttribute="bottom" id="hxe-h5-piv"/>
+                <constraint firstItem="6KP-F3-1dC" firstAttribute="top" secondItem="KU6-MB-4x2" secondAttribute="bottom" constant="2" id="hxe-h5-piv"/>
+                <constraint firstItem="Amp-lj-6QK" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="ogd-1N-Ztb"/>
                 <constraint firstItem="WDj-mg-LZM" firstAttribute="top" secondItem="io0-9P-MxH" secondAttribute="top" id="pEI-TD-ebt"/>
-                <constraint firstItem="Y6S-YG-GFW" firstAttribute="top" secondItem="pcw-0Z-NtY" secondAttribute="top" id="pVH-ui-H6K"/>
                 <constraint firstItem="WDj-mg-LZM" firstAttribute="baseline" secondItem="io0-9P-MxH" secondAttribute="baseline" id="sSY-6N-p5C"/>
                 <constraint firstItem="KU6-MB-4x2" firstAttribute="trailing" secondItem="6KP-F3-1dC" secondAttribute="trailing" id="szf-vZ-RUV"/>
                 <constraint firstAttribute="bottom" secondItem="pcw-0Z-NtY" secondAttribute="bottom" constant="2" id="wFf-cA-vS9"/>
@@ -172,6 +150,5 @@
         <image name="main-control-prev_next" width="152" height="25"/>
         <image name="pause" width="24" height="24"/>
         <image name="play" width="24" height="24"/>
-        <image name="refresh" width="24" height="24"/>
     </resources>
 </document>

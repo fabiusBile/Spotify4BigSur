@@ -6,7 +6,7 @@
 	<dict>
 		<key>Resources/TodayViewController.nib</key>
 		<data>
-		dURqDPf+W0zLEHdidez3VHabdRg=
+		jPPhsfIbEL6FG0b8g9hTuowwWH4=
 		</data>
 		<key>Resources/archived-expanded-entitlements.xcent</key>
 		<data>
@@ -36,17 +36,13 @@
 		<key>Resources/play.ico</key>
 		<data>
 		3s/WnzSLFqzNloDhs7sOW7fbeeM=
-		</data>
-		<key>Resources/refresh.ico</key>
-		<data>
-		FtwU/tN0SwMxzbcE8NN0wS6Yot8=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
 		<key>Resources/TodayViewController.nib</key>
 		<data>
-		dURqDPf+W0zLEHdidez3VHabdRg=
+		jPPhsfIbEL6FG0b8g9hTuowwWH4=
 		</data>
 		<key>Resources/archived-expanded-entitlements.xcent</key>
 		<data>
@@ -76,10 +72,6 @@
 		<key>Resources/play.ico</key>
 		<data>
 		3s/WnzSLFqzNloDhs7sOW7fbeeM=
-		</data>
-		<key>Resources/refresh.ico</key>
-		<data>
-		FtwU/tN0SwMxzbcE8NN0wS6Yot8=
 		</data>
 	</dict>
 	<key>rules</key>
