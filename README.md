@@ -5,7 +5,7 @@ Spotify4BigSur
 
 Implements a Widget for Spotify in the Notification Center of macOS 11.0 BigSur.
 
-Fork of [Spotify4Me by Carabineiro](https://github.com/carabina/Spotify4Me) reworked to work with the BigSur's Notification Center.
+Fork of [Spotify4Me by Carabineiro](https://github.com/carabina/Spotify4Me) reworked with WidgetKit to be compatible with macOS 10.11 Notification Center.
 
 It uses the AppleScript API for Spotify to get the necesseray information and control it.
 
