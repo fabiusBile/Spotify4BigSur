@@ -5,178 +5,61 @@
 	<key>files</key>
 	<dict>
 		<key>Resources/Base.lproj/Main.storyboardc/Info.plist</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			aafLzhbvFeyAZFt4q2GdIvn42mQ=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>Resources/Base.lproj/Main.storyboardc/MainMenu.nib</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			8OZf2T6tUkZFZPp8C9DB3RCB4/8=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>Resources/Base.lproj/Main.storyboardc/NSWindowController-B8D-0N-5wS.nib</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			lmnEImH1oQMDG2SWJGq5qvz5NtA=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>Resources/Base.lproj/Main.storyboardc/XfG-lQ-9wD-view-m2S-Jp-Qdl.nib</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			RcH9TxdBKPIbo/eyKxXAIj2mctc=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>Resources/archived-expanded-entitlements.xcent</key>
 		<data>
-		PS7s1FjRPWLldjCgaeFdC3gO7e8=
+		MU14Jl9tBgwaGcMClnfumsZbez8=
+		</data>
+		<key>Resources/Base.lproj/Main.storyboardc/MainMenu.nib</key>
+		<data>
+		znbU0NHl29/Z4Nn3bO+7+SskHes=
+		</data>
+		<key>Resources/Base.lproj/Main.storyboardc/NSWindowController-B8D-0N-5wS.nib</key>
+		<data>
+		7YFdzWlO0pvgTZzhLsVDpuYJZKM=
+		</data>
+		<key>Resources/Base.lproj/Main.storyboardc/XfG-lQ-9wD-view-m2S-Jp-Qdl.nib</key>
+		<data>
+		v4kXh2dkD9FyMJuHma7hx9pMDY0=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Frameworks/libswiftAppKit.dylib</key>
+		<key>PlugIns/SpotifyWidgetExtension.appex</key>
 		<dict>
 			<key>cdhash</key>
 			<data>
-			SHl98a0bVaStFrT3LAii7PuB7jk=
+			C8MGt0CKdn0H1hKav6iQpLpKLac=
 			</data>
 			<key>requirement</key>
-			<string>cdhash H"48797df1ad1b55a4ad16b4f72c08a2ecfb81ee39"</string>
-		</dict>
-		<key>Frameworks/libswiftCore.dylib</key>
-		<dict>
-			<key>cdhash</key>
-			<data>
-			/FfckfUgDKUIHHG95W7UmzqGDQs=
-			</data>
-			<key>requirement</key>
-			<string>cdhash H"fc57dc91f5200ca5081c71bde56ed49b3a860d0b"</string>
-		</dict>
-		<key>Frameworks/libswiftCoreGraphics.dylib</key>
-		<dict>
-			<key>cdhash</key>
-			<data>
-			36ghfI37PbyjEFPV8jTnxneesgo=
-			</data>
-			<key>requirement</key>
-			<string>cdhash H"dfa8217c8dfb3dbca31053d5f234e7c6779eb20a"</string>
-		</dict>
-		<key>Frameworks/libswiftDarwin.dylib</key>
-		<dict>
-			<key>cdhash</key>
-			<data>
-			k2kHrWusJs4PQa2Guck53eTWTc0=
-			</data>
-			<key>requirement</key>
-			<string>cdhash H"936907ad6bac26ce0f41ad86b9c939dde4d64dcd"</string>
-		</dict>
-		<key>Frameworks/libswiftDispatch.dylib</key>
-		<dict>
-			<key>cdhash</key>
-			<data>
-			vBTB43H807Kzsu5dArTWeVnEBd8=
-			</data>
-			<key>requirement</key>
-			<string>cdhash H"bc14c1e371fcd3b2b3b2ee5d02b4d67959c405df"</string>
-		</dict>
-		<key>Frameworks/libswiftFoundation.dylib</key>
-		<dict>
-			<key>cdhash</key>
-			<data>
-			ESdh4Zg0Xo9S9xDCV+Z+dhofsj8=
-			</data>
-			<key>requirement</key>
-			<string>cdhash H"112761e198345e8f52f710c257e67e761a1fb23f"</string>
-		</dict>
-		<key>Frameworks/libswiftObjectiveC.dylib</key>
-		<dict>
-			<key>cdhash</key>
-			<data>
-			cfu4lK5K63+6QoARxoDhoEo0j/I=
-			</data>
-			<key>requirement</key>
-			<string>cdhash H"71fbb894ae4aeb7fba428011c680e1a04a348ff2"</string>
-		</dict>
-		<key>Frameworks/libswiftQuartzCore.dylib</key>
-		<dict>
-			<key>cdhash</key>
-			<data>
-			9ehY7MzNaiexrHAA7VfrkR+CmyM=
-			</data>
-			<key>requirement</key>
-			<string>cdhash H"f5e858eccccd6a27b1ac7000ed57eb911f829b23"</string>
-		</dict>
-		<key>Frameworks/libswiftSecurity.dylib</key>
-		<dict>
-			<key>cdhash</key>
-			<data>
-			NWJ/neP5L59MENVdxvH8st82mPE=
-			</data>
-			<key>requirement</key>
-			<string>cdhash H"35627f9de3f92f9f4c10d55dc6f1fcb2df3698f1"</string>
-		</dict>
-		<key>PlugIns/SpotifyMain4Me.appex</key>
-		<dict>
-			<key>cdhash</key>
-			<data>
-			JXsKID1XZRK3+7AIfP4JpAz7lIk=
-			</data>
-			<key>requirement</key>
-			<string>cdhash H"257b0a203d576512b7fbb0087cfe09a40cfb9489"</string>
+			<string>cdhash H"0bc306b7408a767d07d6129abfa890a4ba4a2da7" or cdhash H"ee702777bcde8b4658d9bd388c966c593b2e216b"</string>
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/Info.plist</key>
 		<dict>
-			<key>hash</key>
+			<key>hash2</key>
 			<data>
-			aafLzhbvFeyAZFt4q2GdIvn42mQ=
+			lG7aShzcaQFsIngM4r2X4M863GF8O7SR5jNW2QYVrdw=
 			</data>
-			<key>optional</key>
-			<true/>
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/MainMenu.nib</key>
 		<dict>
-			<key>hash</key>
+			<key>hash2</key>
 			<data>
-			8OZf2T6tUkZFZPp8C9DB3RCB4/8=
+			L0VqQY98G8mmS5oFIVSIEF3tOV5xvpoosp4J4vGNt58=
 			</data>
-			<key>optional</key>
-			<true/>
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/NSWindowController-B8D-0N-5wS.nib</key>
 		<dict>
-			<key>hash</key>
+			<key>hash2</key>
 			<data>
-			lmnEImH1oQMDG2SWJGq5qvz5NtA=
+			AAFC04NWly5Vv3vH+mbrqRq3gL3gBNjZ20WVeV91cDE=
 			</data>
-			<key>optional</key>
-			<true/>
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/XfG-lQ-9wD-view-m2S-Jp-Qdl.nib</key>
 		<dict>
-			<key>hash</key>
+			<key>hash2</key>
 			<data>
-			RcH9TxdBKPIbo/eyKxXAIj2mctc=
+			g3zIxkJUsC/QfMwZCP8WY4IoacBlkUvPYnjGj5axex8=
 			</data>
-			<key>optional</key>
-			<true/>
 		</dict>
-		<key>Resources/archived-expanded-entitlements.xcent</key>
-		<data>
-		PS7s1FjRPWLldjCgaeFdC3gO7e8=
-		</data>
 	</dict>
 	<key>rules</key>
 	<dict>
@@ -195,6 +78,11 @@
 			<true/>
 			<key>weight</key>
 			<real>1100</real>
+		</dict>
+		<key>^Resources/Base\.lproj/</key>
+		<dict>
+			<key>weight</key>
+			<real>1010</real>
 		</dict>
 		<key>^version.plist$</key>
 		<true/>
@@ -254,6 +142,11 @@
 			<true/>
 			<key>weight</key>
 			<real>1100</real>
+		</dict>
+		<key>^Resources/Base\.lproj/</key>
+		<dict>
+			<key>weight</key>
+			<real>1010</real>
 		</dict>
 		<key>^[^/]+$</key>
 		<dict>

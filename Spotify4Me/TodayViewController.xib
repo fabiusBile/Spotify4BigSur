@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="17506" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17506"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="TodayViewController" customModule="SpotifyMain4Me" customModuleProvider="target">
@@ -22,10 +24,10 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView simulatedAppContext="notificationCenter" translatesAutoresizingMaskIntoConstraints="NO" id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="87"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="86"/>
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KU6-MB-4x2">
-                    <rect key="frame" x="0.0" y="69" width="233" height="18"/>
+                    <rect key="frame" x="0.0" y="68" width="233" height="18"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="18" id="Uum-mI-cfJ"/>
                     </constraints>
@@ -36,7 +38,7 @@
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RnT-Vb-6ST">
-                    <rect key="frame" x="0.0" y="33" width="233" height="18"/>
+                    <rect key="frame" x="0.0" y="32" width="233" height="18"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="18" id="b2X-h1-rbs"/>
                     </constraints>
@@ -47,7 +49,7 @@
                     </textFieldCell>
                 </textField>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pcw-0Z-NtY">
-                    <rect key="frame" x="40" y="2" width="24" height="28"/>
+                    <rect key="frame" x="39" y="2" width="24" height="27"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="24" id="ZRh-AS-CiT"/>
                     </constraints>
@@ -60,7 +62,7 @@
                     </connections>
                 </button>
                 <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Amp-lj-6QK">
-                    <rect key="frame" x="116" y="6" width="89" height="21"/>
+                    <rect key="frame" x="115" y="1" width="90" height="25"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="17" id="39P-Pd-6JA"/>
                     </constraints>
@@ -69,8 +71,8 @@
                         <action selector="volumeSliderAction:" target="-2" id="VgH-K2-he0"/>
                     </connections>
                 </slider>
-                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kwv-BL-ajF">
-                    <rect key="frame" x="230" y="5" width="80" height="75"/>
+                <imageView wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kwv-BL-ajF">
+                    <rect key="frame" x="230" y="4" width="80" height="75"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="80" id="bI3-Gz-TbP"/>
                         <constraint firstAttribute="height" constant="75" id="hae-Jj-9Wy"/>
@@ -78,7 +80,7 @@
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="JGE-Oy-IUa"/>
                 </imageView>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WDj-mg-LZM">
-                    <rect key="frame" x="12" y="6" width="20" height="20"/>
+                    <rect key="frame" x="11" y="6" width="20" height="19"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="20" id="9UL-nX-AxH"/>
                     </constraints>
@@ -91,7 +93,7 @@
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="io0-9P-MxH">
-                    <rect key="frame" x="72" y="6" width="20" height="20"/>
+                    <rect key="frame" x="71" y="6" width="20" height="19"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="20" id="3bQ-Nw-gwb"/>
                     </constraints>
@@ -104,7 +106,7 @@
                     </connections>
                 </button>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6KP-F3-1dC">
-                    <rect key="frame" x="0.0" y="49" width="233" height="18"/>
+                    <rect key="frame" x="0.0" y="48" width="233" height="18"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="18" id="dY1-2K-fv2"/>
                     </constraints>

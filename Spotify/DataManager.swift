@@ -9,8 +9,12 @@
 import Foundation
 import AppKit
 import NotificationCenter
+import WidgetKit
 
 class DataManager {
+    static let instance : DataManager = DataManager()
+    
+    
     let smState = "smState"
     let smTitle = "smTitle"
     let smAlbum = "smAlbum"
@@ -18,14 +22,13 @@ class DataManager {
     let smCover = "smCover"
     let smVolume = "smVolume"
     
-    var defaults = NSUserDefaults(suiteName: "backert.apps")!
-    var centerReceiver = NSDistributedNotificationCenter()
-    var information: [String:AnyObject] = [:]
-    init(){
-        var observer = centerReceiver.addObserverForName("Spotify4Me", object: nil, queue: nil) { (note) -> Void in
-            println( "received in app \(note.object as String)")
+    var defaults = UserDefaults(suiteName: "backert.apps")!
+    var centerReceiver = DistributedNotificationCenter()
+    var information: [String:Any] = [:]
+    private init(){
+        _ = centerReceiver.addObserver(forName: NSNotification.Name(rawValue: "Spotify4Me"), object: nil, queue: nil) { (note) -> Void in
             var defaultcase = false
-            let cmd = note.object as String
+            let cmd = note.object as! String
             switch cmd {
             case "update":
                 self.update()
@@ -39,25 +42,26 @@ class DataManager {
                 defaultcase = true
                 break
             case let volumestring :
-                if let range = volumestring.rangeOfString("volume") {
-                    let stringVol:String = volumestring.substringFromIndex(range.endIndex)
-                    self.volume(stringVol.toInt()!)
+                if let range = volumestring.range(of: "volume") {
+                    let stringVol:String = volumestring.substring(from: range.upperBound)
+                    self.volume(level: Int(stringVol)!)
                 }
             }
             if !defaultcase {
-                let notify = NSNotification(name: "Spotify4Me", object: "finished")
-                self.centerReceiver.postNotification(notify)
+                let notify = NSNotification(name: NSNotification.Name(rawValue: "Spotify4Me"), object: "finished")
+                self.centerReceiver.post(notify as Notification)
             }
+            
         }
         
-        let spotifyObserver = self.centerReceiver.addObserverForName("com.spotify.client.PlaybackStateChanged", object: nil, queue: nil) { (note) -> Void in
+        let spotifyObserver = self.centerReceiver.addObserver(forName: NSNotification.Name(rawValue: "com.spotify.client.PlaybackStateChanged"), object: nil, queue: nil) { (note) -> Void in
             let info = note.userInfo!
-            let state = info["Player State"]! as String
+            let state = info["Player State"]! as! String
             
-            let notify = NSNotification(name: "Spotify4Me", object: "update")
-            var mainapp: [NSRunningApplication] = NSRunningApplication.runningApplicationsWithBundleIdentifier("backert.SpotifyMain") as [NSRunningApplication]
+            _ = NSNotification(name: NSNotification.Name(rawValue: "Spotify4Me"), object: "update")
+            var mainapp: [NSRunningApplication] = NSRunningApplication.runningApplications(withBundleIdentifier: "backert.SpotifyMain") as [NSRunningApplication]
             
-            var controller = NCWidgetController.widgetController()
+            let controller = NCWidgetController.widgetController()
             
             if state == "Stopped" {
                 controller.setHasContent(false, forWidgetWithBundleIdentifier: "backert.SpotifyMain.SpotifyMain4Me")
@@ -65,8 +69,15 @@ class DataManager {
                 controller.setHasContent(true, forWidgetWithBundleIdentifier: "backert.SpotifyMain.SpotifyMain4Me")
             }
             
+            self.update()
         }
     }
+    public static func updateWidget() {
+        if #available(OSX 11, *) {
+            WidgetCenter.shared.reloadTimelines(ofKind: "SpotifyWidget")
+        }
+    }
+    
     func update(){
         let state = SpotifyApi.getState()
         information.updateValue(state, forKey: smState)
@@ -79,6 +90,7 @@ class DataManager {
         }
         defaults.setPersistentDomain(information, forName: "backert.apps")
         defaults.synchronize()
+        DataManager.updateWidget()
     }
     func playpause(){
         SpotifyApi.toPlayPause()
@@ -93,7 +105,7 @@ class DataManager {
         update()
     }
     func volume(level: Int){
-        SpotifyApi.setVolume(level)
+        SpotifyApi.setVolume(level: level)
         update()
     }
 }

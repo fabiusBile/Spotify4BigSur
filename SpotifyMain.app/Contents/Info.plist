@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>14B25</string>
+	<string>20B29</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -20,26 +20,47 @@
 	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>MacOSX</string>
+	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>None</string>
+			<key>CFBundleURLName</key>
+			<string>spotifyWidget</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>spotifyWidget</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
-	<string>6A1052d</string>
+	<string>12B45b</string>
+	<key>DTPlatformName</key>
+	<string>macosx</string>
 	<key>DTPlatformVersion</key>
-	<string>GM</string>
+	<string>11.0</string>
 	<key>DTSDKBuild</key>
-	<string>14A382</string>
+	<string>20A2408</string>
 	<key>DTSDKName</key>
-	<string>macosx10.10</string>
+	<string>macosx11.0</string>
 	<key>DTXcode</key>
-	<string>0610</string>
+	<string>1220</string>
 	<key>DTXcodeBuild</key>
-	<string>6A1052d</string>
+	<string>12B45b</string>
 	<key>LSBackgroundOnly</key>
 	<true/>
 	<key>LSMinimumSystemVersion</key>
-	<string>10.10</string>
+	<string>11.0</string>
+	<key>NSAppleEventsUsageDescription</key>
+	<string>Enable me</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2014 Lucas Backert. All rights reserved.</string>
 	<key>NSMainStoryboardFile</key>

@@ -10,13 +10,13 @@ import Cocoa
 
 
 class ViewController: NSViewController {
-    var dm = DataManager()
+    var dm = DataManager.instance
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-    override var representedObject: AnyObject? {
+    override var representedObject: Any? {
         didSet {
         // Update the view, if already loaded.
         }
