@@ -11,6 +11,6 @@ It uses the AppleScript API for Spotify to get the necesseray information and co
 
 Watch Screenshot.tiff for preview.
 
-Download the [latest release](https://github.com/fabiusBile/Spotify4BigSur/releases/latest), copy the "SpotifyMain.app" to your Applications folder and start it. Maybe in "Today View" settings the widget still needs to manually added.
+Download [the latest release](https://github.com/fabiusBile/Spotify4BigSur/releases/latest), copy the "SpotifyMain.app" to your Applications folder and start it. Then go to the Notification Center and add the widget.
 
 If you have already installed one version restart the Mac, replace the old SpofityMain.app with the new one and start it.
