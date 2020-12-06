@@ -1,6 +1,8 @@
 Spotify4BigSur
 ==========
 
+<img src="dark.png" width="360"/> <img src="light.png" width="360"/>
+
 Implements a Widget for Spotify in the Notification Center of macOS 11.0 BigSur
 
 Fork of [Spotify4Me by Carabineiro](https://github.com/carabina/Spotify4Me) reworked to work with the BigSur's Notification Center
