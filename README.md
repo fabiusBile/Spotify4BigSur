@@ -1,5 +1,4 @@
-Spotify4BigSur
-==========
+# Spotify4BigSur
 
 <img src="dark.png" width="360"/> <img src="light.png" width="360"/>
 
@@ -7,7 +6,7 @@ Implements a Widget for Spotify in the Notification Center of macOS 11.0 BigSur.
 
 Fork of [Spotify4Me by Carabineiro](https://github.com/carabina/Spotify4Me) reworked with WidgetKit to be compatible with macOS 10.11 Notification Center.
 
-It uses the AppleScript API for Spotify to get the necesseray information and control it.
+It uses the AppleScript API for Spotify to get the necessary information and control it.
 
 Download [the latest release](https://github.com/fabiusBile/Spotify4BigSur/releases/latest), copy the "SpotifyMain.app" to your Applications folder and start it. Then go to the Notification Center and add the widget.
 
