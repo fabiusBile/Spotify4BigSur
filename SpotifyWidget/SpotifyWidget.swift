@@ -55,7 +55,9 @@ struct SpotifyEntry: TimelineEntry {
 
 struct SpotifyWidgetEntryView : View {
     var entry: Provider.Entry
-
+    
+    static let widgetBackground: some View = ContainerRelativeShape().fill(Color.init(.sRGB, red: 0.89, green: 0.89, blue: 0.89, opacity: 0.75))
+    
     func getCommandUrl(_ command : String) -> URL{
         return URL(string: "https://spotifyWidget:///\(command)")!
     }
@@ -68,22 +70,23 @@ struct SpotifyWidgetEntryView : View {
                         if (entry.image != nil){
                             Image(nsImage: entry.image!)
                                 .resizable()
-                                .frame(width: 80.0, height: 80.0)
+                                .frame(width: 70.0, height: 70.0)
                                 
                         }
                         VStack(alignment: HorizontalAlignment.leading){
                             Text(entry.title)
-                                .font(.title)
+                                .font(.system(size: 18))
                                 .foregroundColor(Color.init("AccentColor"))
                                 .fontWeight(.bold)
-                            HStack{
-                                Text("\(entry.artistName) - \(entry.albumName)")
-                                .font(.title2)
+                                .fixedSize(horizontal: false, vertical: true)
+                            Text("\(entry.artistName) - \(entry.albumName)")
+                                    .font(.system(size: 15))
                                     .foregroundColor(Color.init("AccentColor"))
-                            }
+                                .fixedSize(horizontal: false, vertical: true)
                         }
                     }
                     HStack{
+                        Spacer()
                         Link(destination: getCommandUrl(SpotifyCommands.prev)){
                             Image("prev")
                                 .renderingMode(/*@START_MENU_TOKEN@*/.template/*@END_MENU_TOKEN@*/)
@@ -106,13 +109,13 @@ struct SpotifyWidgetEntryView : View {
                                 .resizable()
                                 .frame(width: 32, height: 32, alignment: .trailing)
                                 .foregroundColor(Color.init("AccentColor"))
-                                
                         }
+                        Spacer()
                     }
                 }
             })
-        }.padding(20)
-        .background(ContainerRelativeShape().fill(Color.init(.sRGB, red: 0.89, green: 0.89, blue: 0.89, opacity: 0.75)))
+        }.padding(15)
+        
     }
 }
 
@@ -123,15 +126,29 @@ struct SpotifyWidget: Widget {
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             SpotifyWidgetEntryView(entry: entry)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(SpotifyWidgetEntryView.widgetBackground)
         }
         .configurationDisplayName("Spotify Widget")
         .description("Widget for Spotify.")
+        .supportedFamilies([.systemLarge,.systemMedium])
     }
 }
 
 struct SpotifyWidget_Previews: PreviewProvider {
     static var previews: some View {
-        SpotifyWidgetEntryView(entry: SpotifyEntry(date: Date(), isPlaying: false, image: NSImage(named: "StubImage")))
-            .previewContext(WidgetPreviewContext(family: .systemMedium))
+        SpotifyWidgetEntryView(entry:
+            SpotifyEntry(
+                date: Date(),
+                title: "some long title",
+                artistName: "some artist name",
+                albumName: "some album name",
+                isPlaying: false,
+                image: NSImage(named: "StubImage")
+            )
+        )
+        .previewContext(WidgetPreviewContext(family: .systemMedium))
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(SpotifyWidgetEntryView.widgetBackground)
     }
 }
