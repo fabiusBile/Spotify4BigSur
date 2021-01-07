@@ -6,8 +6,6 @@
 //  Copyright © 2020 Lucas Backert. All rights reserved.
 //
 
-import Foundation
-
 class SpotifyCommands{
     public static let open = "open"
     public static let prev = "prev"
