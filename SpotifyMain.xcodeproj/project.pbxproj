@@ -386,6 +386,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = backert.SpotifyMain.SpotifyWidget;
@@ -434,6 +435,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.1;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = backert.SpotifyMain.SpotifyWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -564,6 +566,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "backert.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = SpotifyMain;
 				SWIFT_VERSION = 5.0;
@@ -584,6 +587,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "backert.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = SpotifyMain;
 				SWIFT_VERSION = 5.0;
