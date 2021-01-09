@@ -2,7 +2,7 @@
 
 ![large](large.png)
 
-![medium dark](medium_dark.png)![medium light](medium_light.png)
+![medium dark](medium_dark.png) ![medium light](medium_light.png)
 
 Implements a Widget for Spotify in the Notification Center of macOS 11.0 BigSur.
 
