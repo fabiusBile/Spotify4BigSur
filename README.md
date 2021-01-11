@@ -4,6 +4,8 @@
 
 ![medium dark](medium_dark.png) ![medium light](medium_light.png)
 
+[Buy me a coffee ☕️](https://ko-fi.com/fabius666)
+
 Implements a Widget for Spotify in the Notification Center of macOS 11.0 BigSur.
 
 Fork of [Spotify4Me by Carabineiro](https://github.com/carabina/Spotify4Me) reworked with WidgetKit to be compatible with macOS 10.11 Notification Center.
